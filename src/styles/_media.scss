@@ -1,0 +1,23 @@
+@media (max-width: 768px) {
+    .main {
+        padding: 32px;
+
+        .ping-logo {
+            margin-bottom: 32px;
+        }
+
+        .title {
+            font-size: 1.5rem;
+        }
+
+        form {
+            flex-direction: column;
+            width: 90%;
+            max-width: 400px;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,126 @@
+@import 'config.scss';
+
+body {
+    height: 100vh;
+}
+
+#root {
+    height: auto;
+    padding: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 768px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    .title {
+        color: $gray;
+        font-size: 3rem;
+        font-weight: 300;
+        text-align: center;
+
+        .highlight {
+            color: black;
+            font-weight: 700;
+        }
+    }
+
+    form {
+        display: flex;
+        gap: 16px;
+        max-width: 600px;
+        position: relative;
+
+        input {
+            padding: 16px 32px;
+            width: 100%;
+            border-radius: 32px;
+            border: 1px solid $gray;
+            font-size: 0.8rem;
+
+            &.error {
+                outline: 1px solid $lightRed;
+            }
+        }
+
+        .message {
+            position: absolute;
+            bottom: -24px;
+            left: 32px;
+            font-size: 0.6rem;
+            color: $lightRed;
+        }
+
+        button {
+            width: 256px;
+            border-radius: 64px;
+            border: none;
+            background: $blue;
+            color: white;
+            font-weight: 600;
+            box-shadow: 4px 6px 8px rgba(0, 0, 0, 0.3);
+            padding: 16px;
+            cursor: pointer;
+
+            &:hover {
+                background: darken($blue, 5%);
+            }
+        }
+    }
+
+    .illustration {
+        width: 100%;
+        margin: 48px 0;
+    }
+
+    .bottom {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+
+            .social-logo {
+                border-radius: 100%;
+                border: 1px solid $gray;
+                padding: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: $blue;
+
+                    img {
+                        filter: invert(100%);
+                    }
+                }
+
+                img {
+                    width: 20px;
+                    filter: invert(58%) sepia(72%) saturate(3825%) hue-rotate(201deg) brightness(96%) contrast(97%);
+
+                }
+            }
+        }
+
+        .copyright {
+            color: $gray;
+            font-size: 0.7rem;
+        }
+    }
+}
+
+
+
+@import 'media.scss';
